@@ -1,0 +1,98 @@
+.project{
+    margin: 50px 0px;
+    margin-left: 170px;
+    
+    /* padding-left: 135px; */
+    /* margin-top: 60px; */
+}
+.project hr{
+    color: #138781;
+    width: 400px;
+    margin: 10px auto;
+}
+.project h2{
+    font-weight: bold;
+    color: #138781;
+}
+#ads{
+    margin: 30px 0px 30px 0px;
+}
+#ads .card-notify-badge{
+    position: absolute;
+    left: -7px;
+    top: -16px;
+    background: #f29f67;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+
+}
+.project .card img{
+    height: 100%;
+    width: 100%;
+}
+.card-detail-badge{
+    background-color: #516b6a;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    padding: 5px 10px;
+    color: black;
+    font-size: 14px;
+
+}
+.card-image-overly{
+    font-size: 20px;
+}
+.card-image-overly span{
+    display: inline-block;
+    margin-left: 5px;
+    color: white;
+}
+.project .card:hover{
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.5s ease;
+}
+.ad-btn{
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    color: white;
+    background-color: #138781;
+    border-radius: 80px;
+    font-size: 16px;
+    line-height: 35px;
+    text-decoration: none;
+    margin: 20px auto 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.ad-btn:hover{
+    background-color: white;
+    color: #138781;
+    background: transparent;
+    border: 2px solid #138781;
+    transition: all 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#dark .project p{
+    color: white;
+}
+@media(max-width:600px){
+    .project{
+        margin: 0;
+        padding: 0;
+        margin-top: 50px;
+    }
+    .project hr{
+        width: 280px;
+    }
+    .project .card{
+        margin-top: 30px;
+    }
+}

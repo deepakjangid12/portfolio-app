@@ -1,0 +1,36 @@
+.work{
+    background-color: #13878120;
+    margin-left: 170px;
+    
+}
+.work-exp{
+    padding: 60px 0px;
+}
+.work-exp h2{
+    color: #1e1e2c;
+    font-weight: bold;
+}
+.work-exp hr{
+    color: #138781;
+    width: 400px;
+    margin: 10px auto;
+
+}
+#dark .vertical-timeline-element-content p{
+    color: white;
+    padding: 10px;
+}
+#dark .work h2{
+    color: white;
+}
+@media(max-width:600px){
+    .work{
+        margin: 0;
+        padding:0 0 0 0 ;
+        margin-top: 20px;
+        padding-right: 10px;
+    }
+    .work hr{
+        width: 280px;
+    }
+}

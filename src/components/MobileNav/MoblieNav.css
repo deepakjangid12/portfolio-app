@@ -1,0 +1,83 @@
+.mobile-nav{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+.mobile-nav-header{
+    height:50px;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 8px;
+}
+.mobile-nav-header .mobile-nav-icon{
+    color: white;
+    cursor: pointer;
+}
+.mobile-nav-title{
+    margin-left: 20px;
+    color: #f29f67;
+    font-weight:bold ;
+    text-transform: capitalize;
+    vertical-align: middle;
+    font-size: 20px;
+}
+.hidden {
+    display: none;
+  }
+  /* Add these styles to your MoblieNav.css file or your styling solution */
+.go-back-button {
+    background-color: #f29f67; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 6px 6px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add a pointer cursor for better usability */
+    font-size: 12px; /* Set the font size */
+     /* Add margin to the right for spacing */
+  }
+  
+  /* Optional: Add hover styles for better interactivity */
+  .go-back-button:hover {
+    background-color: #e18652; /* Change background color on hover */
+  }
+  
+  
+.nav-link .admin-lin{
+    color: white;
+    text-decoration: none;
+}
+.mobile-nav-menu .nav-items{
+    /* height: 100vh;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 45vw;
+    background-color: #1e1e1e;
+    padding: 10px;
+    padding-bottom: 10px;
+    border-bottom-right-radius:10px ;
+    font-size: 15px; */
+    height: auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 15px;
+    width: 200px;
+    background-color: #1e1e1e;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom-right-radius: 10px;
+    
+}
+.mobile-nav-menu .nav-items .nav-item .nav-link{
+  /* padding-top: 10px; */
+  /* padding-bottom: 10px; */
+  /* padding-left: 10px; */
+}
+@media(min-width :600px){
+    .mobile-nav{
+        display: none;
+    }
+}

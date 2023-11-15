@@ -1,0 +1,52 @@
+
+.container {
+    /* max-width: 1200px; */
+    margin: auto;
+  }
+  
+  .login-container,
+  .card-container {
+    margin-top: 50px;
+    /* height: 100vh; */
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  .row2{
+    height: 52.9vh;
+  }
+  .row1{
+    padding-left: 210px;
+    /* border: 2px solid red; */
+    /* margin-left: 170px; */
+  }
+  
+  .btn-login {
+    width: 100%;
+  }
+  #dark .row1 h2 {
+    color:white;
+  }
+  #dark .row1 label{
+    color: white;
+  }
+ 
+  @media (max-width: 767px) {
+    .row1{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .logout-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Add more styles as needed */
+  
