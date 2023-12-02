@@ -1,18 +1,14 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Admin.css';
-// import { API_URL } from './config';
-// import { Link } from "react-router-dom";
 
 function AdminPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [authenticated, setAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formDataList, setFormDataList] = useState([]);
-  // const apiUrl = process.env.REACT_APP_API_URL;
-
 
   useEffect(() => {
     if (authenticated) {
@@ -51,6 +47,8 @@ function AdminPage() {
 
   const handleLogin = async () => {
     try {
+      setIsLoading(true); // Set loading to true during login
+
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/admin-login`, {
         method: 'POST',
         headers: {
@@ -67,6 +65,8 @@ function AdminPage() {
     } catch (error) {
       console.error('Error occurred during login:', error);
       alert('Error occurred during login. Please try again.');
+    } finally {
+      setIsLoading(false); // Set loading back to false after login attempt
     }
   };
 
@@ -89,6 +89,7 @@ function AdminPage() {
     }
   };
 
+
   return (
     <div className=" container mt-5 deep">
       {!authenticated ? (
@@ -101,8 +102,12 @@ function AdminPage() {
             <label>Password: </label>
             <input type="password" value={password} onChange={handlePasswordChange} />
             <br />
-            <button onClick={handleLogin} className="btn-login btn btn-primary mt-3">
-              Login
+            <button
+              onClick={handleLogin}
+              className="btn-login btn btn-primary mt-3 submit-button"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Please wait...' : 'Login'}
             </button>
           </div>
         </>
@@ -118,7 +123,9 @@ function AdminPage() {
                       <Card.Title>{formData.name}</Card.Title>
                       <Card.Subtitle className="mb-2 text-muted">{formData.email}</Card.Subtitle>
                       <Card.Text>{formData.message}</Card.Text>
-                      <Button variant="danger" onClick={() => handleDelete(formData._id)}>Delete</Button>
+                      <Button variant="danger" onClick={() => handleDelete(formData._id)}>
+                        Delete
+                      </Button>
                     </Card.Body>
                   </Card>
                 </div>
